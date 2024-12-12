@@ -1,2 +1,2 @@
 # Federated-Transfer-MOSAHit
-federated tranfer learning
+Federated transfer learning with differential privacy for multi-omics survival analysis
