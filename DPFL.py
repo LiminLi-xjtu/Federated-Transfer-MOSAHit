@@ -54,7 +54,7 @@ if __name__ == '__main__':
     lamda = 0.1
     target_lamda = 0.1
 
-    base_path = "./Datasets"
+    base_path = "./Data_preprocessing"
     TRAIN_PATH_Site_1 = base_path + "/Meta_Train_Data/Site_1"
     dir_res = os.listdir(TRAIN_PATH_Site_1)
     Flag = True
