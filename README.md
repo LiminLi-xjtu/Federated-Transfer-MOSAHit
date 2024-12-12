@@ -16,7 +16,7 @@ The TCGA datasets are publicly available and can be obtained from the UCSC Xena 
 
 # Data Preprocessing
 
-#### cd Federated-Transfer-MOSAHit/Data_preprocessing
+#### cd Federated-Transfer-MOSAHit/Datasets
 
 The python program (extract_RNASeq_expression.py) summarized the gene expression of patients with the same type of cancer into a csv file. 
 
