@@ -49,12 +49,12 @@ if __name__ == '__main__':
     train_rate = 0.8
     train_lr = 2e-4
     num_category = 30
-    time_interval = 120
+    time_interval = 90
     delta = 0.1
-    lamda = 0.5
-    target_lamda = 0.5
+    lamda = 0.1
+    target_lamda = 0.1
 
-    base_path = "/share/home/4120107034/FTMOSurv/Method/BRCA"
+    base_path = "./Dataset/"
     TRAIN_PATH_Site_1 = base_path + "/Meta_Train_Data/Site_1"
     dir_res = os.listdir(TRAIN_PATH_Site_1)
     Flag = True
@@ -197,7 +197,7 @@ if __name__ == '__main__':
     # RNASeq_arr_4 = standard_scaler.fit_transform(RNASeq_arr_4)
     # miRNA_arr_4 = standard_scaler.fit_transform(miRNA_arr_4)
 
-    Target_PATH = base_path + "/Meta_Target_Data/BRCA"
+    Target_PATH = base_path + "/Meta_Target_Data/BLCA"
     RNASeq_feature = np.loadtxt(fname=Target_PATH + "/RNASeq.csv", delimiter=",", skiprows=1)
     miRNA_feature = np.loadtxt(fname=Target_PATH + "/miRNA.csv", delimiter=",", skiprows=1)
     ytime = np.loadtxt(fname=Target_PATH + "/ytime.csv", delimiter=",", skiprows=1)
@@ -285,8 +285,8 @@ if __name__ == '__main__':
         best_iter = 0
         Aux_TRAIN_NUM = 300
         TRAIN_NUM = np.min(np.array([300, math.floor(RNASeq_feature.shape[0] * train_rate)]))
-        dead_sample_rate = 0.25
-        alive_sample_rate = 0.75
+        dead_sample_rate = 0.45
+        alive_sample_rate = 0.55
         for iter in range(100):
             print(iter)
             site1_model.train()
